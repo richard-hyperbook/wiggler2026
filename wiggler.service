@@ -1,0 +1,14 @@
+[Unit]
+Description=Wiggler
+After=network-online.target
+
+[Service]
+ExecStart=/home/raspberry/webserver/express/wigglerStart
+WorkingDirectory=/home/raspberry/webserver/express
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=owner
+
+[Install]
+WantedBy=multi-user.target

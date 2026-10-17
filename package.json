@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1",
+    "http-errors": "^2.0.1",
+    "joystick": "^0.1.2",
+    "libxmljs": "^1.0.11",
+    "morgan": "^1.10.1",
+    "node-gyp": "^12.1.0",
+    "raspi": "^6.0.1",
+    "raspi-i2c": "^6.2.4",
+    "raspi-serial": "^6.0.0",
+    "router": "^2.2.0",
+    "serialport": "^13.0.0",
+    "sleep-promise": "^9.1.0"
+  }
+}
