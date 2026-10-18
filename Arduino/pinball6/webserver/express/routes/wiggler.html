@@ -1,0 +1,125 @@
+
+
+<html>
+  <head>
+    <title>Wiggler</title>
+    <style>
+      body {
+/*        background-image: url('/images/twOn.png');
+        background-repeat: no-repeat; */
+        background-color: #000000;
+    /*    background-size: cover; */
+        zoom: 0.4444;       
+      }
+      .p1score {
+        width: 283px;
+        height: 57px;
+        top: 210px;
+        left: #{p1m3Left}px;
+        clip-path: inset(0% #{p1m3ClipRight}px 0% #{p1m3ClipLeft}px);
+        position: absolute;
+      }
+    .d{
+        position: fixed;
+        font-family:"Courier New";
+        font-size:calc(var(--ySize));
+        color:Grey;
+      }
+    .g{
+        position: fixed;
+        font-family:"Courier New";
+        color:White; 
+     }
+
+    :root{
+     --xBase: 1210px;
+     --yBase: 0px;
+     --xSpacing: 100px;
+     --ySpacing: 150px;
+     --ySize: 130px;
+     --xGameOver: 1210px;
+     --yGameOver: 700px;
+     --sizeGameOver: 70px;
+     --xInPlay: 1210px;
+     --yInPlay: 800px;
+     --sizeInPlay: 55px;
+     --xCanPlay: 1210px;
+     --yCanPlay: 900px;
+     --sizeCanPlay: 55px; 
+    }
+    .gameOver{left:var(--xGameOver);top:var(--yGameOver);font-size:var(--sizeGameOver);}
+    .inPlay{left:var(--xInPlay);top:var(--yInPlay);font-size:var(--sizeInPlay);}
+    .canPlay{left:var(--xCanPlay);top:var(--yCanPlay);font-size:var(--sizeCanPlay);}
+    
+    .x4{left:calc(var(--xBase));}
+    .x3{left:calc(var(--xSpacing) + var(--xBase));}
+    .x2{left:calc((var(--xSpacing) * 2) + var(--xBase));}
+    .x1{left:calc((var(--xSpacing) * 3) + var(--xBase));}
+    .y1{top:calc(var(--yBase));}
+    .y2{top:calc(var(--ySpacing) + var(--yBase));}
+    .y3{top:calc((var(--ySpacing) * 2) + var(--yBase));}
+    .y4{top:calc((var(--ySpacing) * 3) + var(--yBase));}
+    </style>
+    
+      <script src="/javascripts/tables.js"></script>
+      <script src="/javascripts/pinball.js"></script>
+  </head>
+   
+  <body onload="setup()">
+
+    <img src='/images/twOn.png' id="backgound">
+    <img src='/images/ballyreel.png' class="p1score" id="p1m3">
+    <img src='/images/ballyreel.png' class="p1score" id="p1m2">
+    <img src='/images/ballyreel.png' class="p1score" id="p1m1">
+    <img src='/images/ballyreel.png' class="p1score" id="p1m0">
+    <img src='/images/ballyreel.png' class="p1score" id="p2m3">
+    <img src='/images/ballyreel.png' class="p1score" id="p2m2">
+    <img src='/images/ballyreel.png' class="p1score" id="p2m1">
+    <img src='/images/ballyreel.png' class="p1score" id="p2m0">
+    <img src='/images/ballyreel.png' class="p1score" id="p3m3">
+    <img src='/images/ballyreel.png' class="p1score" id="p3m2">
+    <img src='/images/ballyreel.png' class="p1score" id="p3m1">
+    <img src='/images/ballyreel.png' class="p1score" id="p3m0">
+    <img src='/images/ballyreel.png' class="p1score" id="p4m3">
+    <img src='/images/ballyreel.png' class="p1score" id="p4m2">
+    <img src='/images/ballyreel.png' class="p1score" id="p4m1">
+    <img src='/images/ballyreel.png' class="p1score" id="p4m0">
+    <img src='/images/Up1Reel.png' class="upLight" id="up1">
+    <img src='/images/Up2Reel.png' class="upLight" id="up2">
+    <img src='/images/Up3Reel.png' class="upLight" id="up3">
+    <img src='/images/Up4Reel.png' class="upLight" id="up4"> 
+    <img src='/images/CanPlay1.png' class="canPlayLight" id="cp1">
+    <img src='/images/CanPlay2.png' class="canPlayLight" id="cp2">
+    <img src='/images/CanPlay3.png' class="canPlayLight" id="cp3">
+    <img src='/images/CanPlay4.png' class="canPlayLight" id="cp4">
+    <img src='/images/TWBIP.png' class="ballInPlayLight" id="bip">
+    <img src='/images/GameOverReel.png' class="gameOverLight" id="gameOver">
+  
+    <button type="button" id="target" onclick="test()">W</button>
+
+<h1 class="d x1 y1" id="A">A</h1>
+<h1 class="d x2 y1" id="B">B</h1>
+<h1 class="d x3 y1" id="C">C</h1>
+<h1 class="d x4 y1" id="D">D</h1>
+<h1 class="d x1 y2" id="E">E</h1>
+<h1 class="d x2 y2" id="F">F</h1>
+<h1 class="d x3 y2" id="G">G</h1>
+<h1 class="d x4 y2" id="H">H</h1>
+<h1 class="d x1 y3" id="I">I</h1>
+<h1 class="d x2 y3" id="J">J</h1>
+<h1 class="d x3 y3" id="K">K</h1>
+<h1 class="d x4 y3" id="L">L</h1>
+<h1 class="d x1 y4" id="M">M</h1>
+<h1 class="d x2 y4" id="N">N</h1>
+<h1 class="d x3 y4" id="O">O</h1>
+<h1 class="d x4 y4" id="P">P</h1>
+
+
+<h1 class="g up" id="UP">UP</h1>
+<h1 class="g gameOver" id="GAMEOVER">GAME OVER</h1>
+<h1 class="g inPlay" id="INPLAY">INPLAY</h1>
+<h1 class="g canPlay" id="CANPLAY">CANPLAY</h1>
+
+
+</body>
+</html>

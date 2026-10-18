@@ -1,0 +1,26 @@
+{
+  "name": "wiggler",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "http-errors": "^2.0.0",
+    "jade": "^1.11.0",
+    "joystick": "^0.1.2",
+    "morgan": "^1.10.0",
+    "node-libgpiod": "^0.4.7",
+    "raspi": "^6.0.1",
+    "raspi-i2c": "^6.2.4",
+    "raspi-serial": "^6.0.0",
+    "serialport": "^13.0.0",
+    "sleep-promise": "^9.1.0",
+    "ws": "^8.18.2"
+  }
+}

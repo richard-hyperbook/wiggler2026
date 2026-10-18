@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "johnny-five": "^2.1.0",
+    "joystick": "^0.1.2",
+    "node-libgpiod": "^0.4.7",
+    "prompt-sync": "^4.2.0",
+    "raspi-i2c": "^6.2.4",
+    "raspi-io": "^11.0.0",
+    "serial": "^0.0.9",
+    "serialport": "^13.0.0",
+    "sleep-promise": "^9.1.0"
+  }
+}
